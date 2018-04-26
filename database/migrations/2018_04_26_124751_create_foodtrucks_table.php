@@ -16,7 +16,9 @@ class CreateFoodtrucksTable extends Migration
         Schema::create('foodtrucks', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->string('description');
             $table->string('location');
+            $table->float('rating');
             $table->timestamps();
         });
     }
