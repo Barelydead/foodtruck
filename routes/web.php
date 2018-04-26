@@ -18,5 +18,4 @@ Route::get('/trucks', 'PublicController@getTrucks');
 Route::get('/map', 'PublicController@getMap');
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin', 'HomeController@index')->name('home');

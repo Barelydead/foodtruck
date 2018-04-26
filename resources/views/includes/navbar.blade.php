@@ -17,6 +17,21 @@
                     <a class="nav-link" href="{{ URL::to('/map')}}">Map</a>
                 </li>
             </ul>
+
+            <ul class="navbar-nav right">
+                @if (Auth::guest())
+                    <li class="{{ (Request::is('login') ? 'active' : '') }}">
+                        <a href="{{ url('login') }}">
+                            <i class="fa fa-sign-in"></i> Login
+                        </a>
+                    </li>
+                @else
+                    <li>
+                        <a href="{{ URL::to('admin') }}">Username</a>
+                    </li>
+                @endif
+            </ul>
+
         </div>
     </div>
 </nav>
