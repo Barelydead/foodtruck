@@ -11,6 +11,12 @@
 |
 */
 
+
+// Base routes for the public
 Route::get('/', 'PublicController@getHome');
 Route::get('/trucks', 'PublicController@getTrucks');
 Route::get('/map', 'PublicController@getMap');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

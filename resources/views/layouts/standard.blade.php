@@ -13,8 +13,10 @@
         @include('includes.navbar')
 
         {{-- Page content --}}
-        <div>
-            @yield('content')
+        <div class="main-wrap">
+            <div class="container fill bg-overlay">
+                @yield('content')
+            </div>
         </div>
 
         {{-- footer area  --}}

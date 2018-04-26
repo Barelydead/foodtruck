@@ -1,0 +1,11 @@
+.main-wrap {
+    background-image: url('../img/cityscape.jpg');
+    background-size: cover;
+    min-height: 500px;
+    height: 90vh;
+}
+
+.bg-overlay {
+    background: rgba(255, 255, 255, 0.5);
+    height: 100%;
+}
