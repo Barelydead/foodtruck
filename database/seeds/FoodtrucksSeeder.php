@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class DatabaseSeeder extends Seeder
+class FoodtruckSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,16 +14,21 @@ class DatabaseSeeder extends Seeder
     {
         DB::table('foodtrucks')->insert([
             'name' => 'Gyros King',
-            'location' => 'Göteborg Centrum'
+            'location' => 'Göteborg Centrum',
+            'description' => 'test desc',
+            'user_id' => 1
         ]);
 
         DB::table('foodtrucks')->insert([
             'name' => 'Kebab Queen',
-            'location' => 'Mölndal station'
+            'description' => 'test desc',
+            'location' => 'Mölndal station',
+            'user_id' => 2
         ]);
 
         DB::table('foodtrucks')->insert([
             'name' => 'Pizza Prince',
+            'description' => 'test desc',
             'location' => 'Tuve centrum'
         ]);
     }

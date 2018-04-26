@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Foodtrucks as Foodtrucks;
+use App\Users as Users;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $userId = auth()->user()->id;
+        $trucks = new Foodtrucks();
+
+        return view('home', [
+            'truck' => $trucks->where('user_id', $userId)->first()
+        ]);
     }
 }
