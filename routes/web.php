@@ -12,3 +12,5 @@
 */
 
 Route::get('/', 'PublicController@getHome');
+Route::get('/trucks', 'PublicController@getTrucks');
+Route::get('/map', 'PublicController@getMap');

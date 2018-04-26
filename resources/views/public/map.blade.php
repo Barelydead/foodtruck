@@ -1,5 +1,5 @@
 @extends('layouts.standard')
-@section('title', 'Foodtruck mania')
+@section('title', 'Foodtruck mania - map')
 
 @section('content')
     <div class="container">
