@@ -2,15 +2,18 @@
 @section('title', 'Foodtruck mania - trucks')
 
 @section('content')
-        @foreach ($trucks as $truck)
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">{{ $truck->name }}</h5>
-                    <p class="card-text">{{ $truck->description }}</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="row d-flex p-3">
+            @foreach ($trucks as $truck)
+                <div class="card col-md mx-2">
+                    <div class="card-header">
+                        <h2>{{ $truck->name }}</h2>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">{{ $truck->description }}</p>
+                        <a href="{{URL::to("/trucks/$truck->id")}}" class="btn btn-primary">More details</a>
+                    </div>
                 </div>
+                <p>{{ $truck->location }}</p>
+            @endforeach
             </div>
-            <p>{{ $truck->location }}</p>
-        @endforeach
 @endsection

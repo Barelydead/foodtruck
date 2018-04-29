@@ -15,6 +15,7 @@
 // Base routes for the public
 Route::get('/', 'PublicController@getHome');
 Route::get('/trucks', 'PublicController@getTrucks');
+Route::get('/trucks/{id}', 'PublicController@getTruckDetails');
 Route::get('/map', 'PublicController@getMap');
 
 Auth::routes();
