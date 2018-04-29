@@ -14,7 +14,9 @@ class Foodtrucks extends Model
      */
     protected $fillable = [
         'description',
-        'rating'
+        'rating',
+        'created_at',
+        'updated_at'
     ];
 
     /**

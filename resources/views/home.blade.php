@@ -24,8 +24,12 @@
                 <div class="card-header">Details</div>
                 <div class="card-body">
                     <p>{{ $truck->description }}</p>
-                    <p>{{ $truck->location }}</p>
-                <a href="#" class="btn btn-primary">Edit details</a>
+                    <p>{{ $truck->country }}</p>
+                    <p>{{ $truck->city }}</p>
+                    <p>{{ $truck->address }}</p>
+                    <p>{{ $truck->open }}</p>
+                    <p>{{ $truck->website }}</p>
+                <a href=" {{URL::to("/admin/update/truckinfo")}}" class="btn btn-primary">Edit details</a>
                 </div>
             </div>
         </div>

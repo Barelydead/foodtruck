@@ -19,3 +19,6 @@ Route::get('/map', 'PublicController@getMap');
 
 Auth::routes();
 Route::get('/admin', 'HomeController@index')->name('home');
+Route::post('/admin/truckFormValidation', 'HomeController@truckFormValidation');
+Route::get('/admin/update/truckinfo', 'HomeController@getTruckForm');
+Route::post('/admin/validateEditTruckFormValidation', 'HomeController@validateEditTruckFormValidation');

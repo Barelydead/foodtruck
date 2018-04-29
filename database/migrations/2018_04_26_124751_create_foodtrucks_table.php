@@ -17,7 +17,12 @@ class CreateFoodtrucksTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('description')->nullable();
-            $table->string('location')->nullable();
+            $table->string('country')->nullable();
+            $table->string('city')->nullable();
+            $table->string('address')->nullable();
+            $table->string('website')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('open')->nullable();
             $table->float('rating')->nullable();
             $table->unsignedInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users');

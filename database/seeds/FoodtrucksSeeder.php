@@ -14,22 +14,24 @@ class FoodtruckSeeder extends Seeder
     {
         DB::table('foodtrucks')->insert([
             'name' => 'Gyros King',
-            'location' => 'Göteborg Centrum',
+            'country' => 'Sweden',
+            'city' => 'Göteborg',
             'description' => 'test desc',
             'user_id' => 1
         ]);
 
         DB::table('foodtrucks')->insert([
             'name' => 'Kebab Queen',
-            'description' => 'test desc',
-            'location' => 'Mölndal station',
+            'country' => 'Sweden',
+            'city' => 'Göteborg',
             'user_id' => 2
         ]);
 
         DB::table('foodtrucks')->insert([
             'name' => 'Pizza Prince',
             'description' => 'test desc',
-            'location' => 'Tuve centrum'
+            'country' => 'Sweden',
+            'city' => 'Göteborg'
         ]);
     }
 }
