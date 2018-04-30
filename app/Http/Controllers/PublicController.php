@@ -27,7 +27,13 @@ class PublicController extends Controller
 
     public function getMap()
     {
-        return view("public.map");
+        $trucks = new Trucks();
+        $coList = $trucks->getCoordinatesList();
+
+
+        return view('public.map', [
+            'coordinates' => $coList,
+        ]);
     }
 
     public function getTruckDetails($id)
@@ -42,5 +48,14 @@ class PublicController extends Controller
             'truck' => $info,
             'latLong' => $geo->getLatLong($location)
         ]);
+    }
+
+
+    public function getJsonCoordinates()
+    {
+        $trucks = new Trucks();
+        $coList = $trucks->getCoordinatesList();
+
+        return $coList;
     }
 }

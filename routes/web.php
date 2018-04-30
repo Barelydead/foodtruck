@@ -18,6 +18,8 @@ Route::get('/trucks', 'PublicController@getTrucks');
 Route::get('/trucks/{id}', 'PublicController@getTruckDetails');
 Route::get('/map', 'PublicController@getMap');
 
+Route::get('/api/coordinates', 'PublicController@getJsonCoordinates');
+
 Auth::routes();
 Route::get('/admin', 'HomeController@index')->name('home');
 Route::post('/admin/truckFormValidation', 'HomeController@truckFormValidation');
