@@ -21,7 +21,10 @@
         </div>
         <div class="col-md-4">
             <div class="card">
-                <div class="card-header">Details</div>
+                <div class="card-header d-flex justify-content-between">
+                    Details
+                    <a href=" {{URL::to("/admin/update/truckinfo")}}" class="">edit details</a>
+                </div>
                 <div class="card-body">
                     <p>{{ $truck->description }}</p>
                     <p>{{ $truck->country }}</p>
@@ -29,36 +32,29 @@
                     <p>{{ $truck->address }}</p>
                     <p>{{ $truck->open }}</p>
                     <p>{{ $truck->website }}</p>
-                <a href=" {{URL::to("/admin/update/truckinfo")}}" class="btn btn-primary">Edit details</a>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md">
             <div class="card">
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
+                <div class="card-header d-flex justify-content-between">
+                    Menu
+                    <a href="{{ URL::to('/admin/update/menu')}}">edit menu</a>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
-
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+                    @foreach ($menuCategories as $cat)
+                        <h4>{{ $cat->title }}</h4>
+                        @foreach ($menuItems as $item)
+                            @if ($cat->id == $item->category_id)
+                                <div class="d-flex justify-content-between">
+                                    <p>{{$item->title}}</p>
+                                    <p>{{$item->price}}</p>
+                                </div>
+                                    <p class="text-muted mb-3">{{$item->description}}</p>
+                            @endif
+                        @endforeach
+                    @endforeach
 
-                    You are logged in!
                 </div>
             </div>
         </div>

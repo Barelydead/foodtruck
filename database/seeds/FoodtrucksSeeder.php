@@ -16,7 +16,7 @@ class FoodtruckSeeder extends Seeder
             'name' => 'Gyros King',
             'country' => 'Sweden',
             'city' => 'Göteborg',
-            'description' => 'test desc',
+            'description' => 'This is the best gyros truck in town. Come visit us if you would like to eat like a king.',
             'user_id' => 1
         ]);
 

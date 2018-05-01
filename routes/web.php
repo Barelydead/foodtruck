@@ -21,7 +21,12 @@ Route::get('/map', 'PublicController@getMap');
 Route::get('/api/coordinates', 'PublicController@getJsonCoordinates');
 
 Auth::routes();
+// Admin routes
 Route::get('/admin', 'HomeController@index')->name('home');
-Route::post('/admin/truckFormValidation', 'HomeController@truckFormValidation');
 Route::get('/admin/update/truckinfo', 'HomeController@getTruckForm');
+Route::get('/admin/update/menu', 'HomeController@getMenuForm');
+
+// validating routes
+Route::post('/admin/truckFormValidation', 'HomeController@truckFormValidation');
+Route::any('/admin/menuFormValidation', 'HomeController@menuFormValidation');
 Route::post('/admin/validateEditTruckFormValidation', 'HomeController@validateEditTruckFormValidation');
