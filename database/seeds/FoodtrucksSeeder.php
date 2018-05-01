@@ -16,7 +16,11 @@ class FoodtruckSeeder extends Seeder
             'name' => 'Gyros King',
             'country' => 'Sweden',
             'city' => 'Göteborg',
+            'address' => 'Vasagatan 1',
             'description' => 'This is the best gyros truck in town. Come visit us if you would like to eat like a king.',
+            'phone' => '012-34 56 789',
+            'website' => 'www.gyrosking.com',
+            'open' => '10.00-20.00',
             'user_id' => 1
         ]);
 

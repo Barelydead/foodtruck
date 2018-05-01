@@ -11,7 +11,23 @@
             <p class="mt-5">Opening Hours: {{$truck->open}}</p>
             <p>Website: <a href="http://{{$truck->website}}">{{$truck->website}}</a></p>
             <p>Phone Number: {{$truck->phone}}</p>
-
+        </div>
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <h2>Menu</h2>
+                @foreach ($categories as $cat)
+                    <h4 class="mt-5">{{ $cat->title }}</h4>
+                    @foreach ($items as $item)
+                        @if ($cat->id == $item->category_id)
+                            <div class="d-flex justify-content-between">
+                                <p>{{$item->title}}</p>
+                                <p>{{$item->price}}</p>
+                            </div>
+                                <p class="text-muted mb-3">{{$item->description}}</p>
+                        @endif
+                    @endforeach
+                @endforeach
+            </div>
         </div>
 
 

@@ -41,12 +41,16 @@ class PublicController extends Controller
         $trucks = new Trucks();
         $info = $trucks->where('id', $id)->first();
         $location = "$info->country+$info->city+$info->address";
-
         $geo = new Geo();
+
+        $categories = DB::table('menuCategory')->where('truck_id', $id)->get();
+        $items = DB::table('menuItems')->where('truck_id', $id)->get();
 
         return view('public.truckInfo', [
             'truck' => $info,
-            'latLong' => $geo->getLatLong($location)
+            'latLong' => $geo->getLatLong($location),
+            'categories' => $categories,
+            'items' => $items
         ]);
     }
 

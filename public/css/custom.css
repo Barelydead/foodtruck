@@ -1,4 +1,4 @@
-.main-wrap {
+/* .main-wrap {
     background-image: url('../img/cityscape.jpg');
     background-size: cover;
     min-height: 500px;
@@ -7,7 +7,7 @@
 .bg-overlay {
     background: rgba(255, 255, 255, 0.7);
     height: 100%;
-}
+} */
 
 #map {
     width: 100%;
@@ -18,8 +18,8 @@
     height: 400px;
 }
 
-
+/* 
 .bg-overlay
 .jumbotron {
     background-color: transparent;
-}
+} */
