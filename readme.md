@@ -3,13 +3,19 @@ För att bygga denna tjänst så har jag använt ramverket laravel tillsammans m
 Jag har också använt bootstrap (css) för att snabbt komma igång med en snygg och responsiv layout.
 
 ## Requirements
-Php 7.*
-composer
+composer and PHP 7+ need to be installed
 
 ## install
-`git clone`
-`cd foodtruck`
-`make init`
+- `git clone`
+- `cd foodtruck`
+- `make install`
+
+Website is ready and inited with some data.
+
+**Login details**
+mail: john@doe.se
+
+passowrd: johndoe
 
 ## Use cases
 Foodtruck ägare
