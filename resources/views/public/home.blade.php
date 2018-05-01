@@ -12,7 +12,7 @@
         <hr class="my-4">
         <p>Do you own a foodtruck and wish to get more customers?</p>
         <p class="lead">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Sign up here</a>
+            <a class="btn btn-primary btn-lg" href="{{ URL::to('/register')}}" role="button">Sign up here</a>
         </p>
     </div>
 @endsection

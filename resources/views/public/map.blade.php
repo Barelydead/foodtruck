@@ -13,6 +13,7 @@ var xhr = new XMLHttpRequest();
 xhr.open('GET', 'http://localhost:8082/projekt/projects/blog/public/api/coordinates');
 xhr.onload = function() {
     if (xhr.status === 200) {
+        var base_url = window.location.origin;
         locations = JSON.parse(xhr.responseText);
 
         map = new google.maps.Map(document.getElementById('map'), {
@@ -24,7 +25,8 @@ xhr.onload = function() {
             var marker = new google.maps.Marker({
               position: {lat: locations[i].lat, lng: locations[i].lng},
               map: map,
-              title: locations[i].name
+              title: locations[i].name,
+              url: locations[i].url
             });
 
             google.maps.event.addListener(marker, 'click', function() {

@@ -42,7 +42,7 @@ class Foodtrucks extends Model
         foreach ($trucks as $index => $truck) {
             $coordinates = $geo->getLatLong("$truck->country+$truck->city+$truck->address");
             $coordinates['name'] = $truck->name;
-            $coordinates['id'] = $truck->id;
+            $coordinates['url'] = \URL::to("trucks/$truck->id");
 
             array_push($coordinateList, $coordinates);
         }

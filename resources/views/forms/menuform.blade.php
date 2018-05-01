@@ -42,6 +42,9 @@
     <div class="col-md">
         <h4>add item</h4>
 
+        @if (count($categories) == 0)
+            <p class="text-info">You have to add category before adding food items</p>
+        @else
         <form method="POST" action="{{URL::to('/admin/menuFormValidation')}}" id="menuItem">
             <div class="form-group">
             <label>food title</label>
@@ -67,6 +70,7 @@
             <input type="hidden" name="addMenuItem" value="true">
             <input type="submit" value="save" class="btn btn-primary">
         </form>
+        @endif
         @if (session('item') || session('removeItem'))
             <div class="alert alert-success">
                 {{ session('item') }}{{ session('removeItem') }}

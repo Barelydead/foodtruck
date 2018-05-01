@@ -15,10 +15,11 @@
 }
 
 #map.tall-map {
-    height: 400px;
+    height: 600px;
+    max-height: 80vh;
 }
 
-/* 
+/*
 .bg-overlay
 .jumbotron {
     background-color: transparent;

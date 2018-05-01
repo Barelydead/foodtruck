@@ -30,8 +30,13 @@ class HomeController extends Controller
         $trucks = new Foodtrucks();
         $truck = $trucks->where('user_id', $userId)->first();
 
-        $menuItems = DB::table('menuItems')->where('truck_id', $truck->id)->get();
-        $categories = DB::table('menuCategory')->where('truck_id', $truck->id)->get();
+        if (isset($truck->id)) {
+            $menuItems = DB::table('menuItems')->where('truck_id', $truck->id)->get();
+            $categories = DB::table('menuCategory')->where('truck_id', $truck->id)->get();
+        } else {
+            $menuItems = null;
+            $categories = null;
+        }
 
         return view('home', [
             'truck' => $truck,
