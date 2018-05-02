@@ -27,15 +27,24 @@ class FoodtruckSeeder extends Seeder
         DB::table('foodtrucks')->insert([
             'name' => 'Kebab Queen',
             'country' => 'Sweden',
-            'city' => 'Göteborg',
+            'city' => 'stockholm',
+            'address' => 'kungsgatan 1',
+            'description' => 'Awesome kebab at a good price. welcome!',
+            'phone' => '012-34 56 789',
+            'website' => 'www.kebabqueen.com',
+            'open' => '10.00-20.00',
             'user_id' => 2
         ]);
 
         DB::table('foodtrucks')->insert([
             'name' => 'Pizza Prince',
-            'description' => 'test desc',
             'country' => 'Sweden',
-            'city' => 'Göteborg'
+            'city' => 'malmö',
+            'address' => 'stationsgatan 1',
+            'description' => 'crispy pizza with the best toppings! C ya over a slice',
+            'phone' => '012-34 56 789',
+            'website' => 'www.pizzaprince.com',
+            'open' => '10.00-20.00'
         ]);
     }
 }
